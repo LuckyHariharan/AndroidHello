@@ -51,7 +51,11 @@ android {
 }
 
 dependencies {
+    // Dagger Hilt dependencies
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
+    // Network
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 
 
