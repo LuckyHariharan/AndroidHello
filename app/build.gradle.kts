@@ -52,15 +52,6 @@ android {
 
 dependencies {
 
-    // JUnit4
-    testImplementation ("junit:junit:4.13.2")
-    // AndroidX Test - Core library
-    androidTestImplementation ("androidx.test:core-ktx:1.4.0")
-    // AndroidX Test - Assertions and runner
-    androidTestImplementation ("androidx.test.ext:junit-ktx:1.1.3")
-    androidTestImplementation ("androidx.test:runner:1.4.0")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
-
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 
 
