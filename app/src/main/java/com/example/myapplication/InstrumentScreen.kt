@@ -57,11 +57,29 @@ fun FilterItem(type: String, viewModel: InstrumentViewModel) {
 fun InstrumentItemView(instrument: Instrument) {
     Card(modifier = Modifier.padding(8.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = instrument.name)
-            Text(text = instrument.ticker)
-            Text(text = instrument.instrument_type)
-            Text(text = "Current Price: ${instrument.current_price}")
-            Text(text = "Previous Price: ${instrument.previous_price}")
+            Text(
+                text = instrument.name,
+                style = MaterialTheme.typography.headlineLarge,
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = instrument.ticker,
+                style = MaterialTheme.typography.headlineMedium,
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "Type: ${instrument.instrument_type}",
+                style = MaterialTheme.typography.headlineSmall
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "Current Price: ${instrument.current_price}",
+                style = MaterialTheme.typography.headlineSmall
+            )
+            Text(
+                text = "Previous Price: ${instrument.previous_price}",
+                style = MaterialTheme.typography.headlineSmall
+            )
             Text(text = instrument.description)
         }
     }
