@@ -37,7 +37,7 @@ fun FilterComposable(viewModel: InstrumentViewModel) {
 
 @Composable
 fun FilterItem(type: String, viewModel: InstrumentViewModel) {
-    var checkedState by remember { mutableStateOf(false) }
+    var checkedState by remember { mutableStateOf(viewModel.isTypeSelected(type)) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.padding(vertical = 4.dp)
