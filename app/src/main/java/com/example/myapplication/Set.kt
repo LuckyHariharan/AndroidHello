@@ -22,6 +22,7 @@ class Set {
 
 
     fun remove(element: Int) {
+        if (!contains(element)) return  // If element is not in the set, return early
         for (i in 0 until size) {
             if (elements[i] == element) {
                 // Shift the remaining elements to the left
@@ -33,6 +34,7 @@ class Set {
             }
         }
     }
+
 
     fun size(): Int {
         return size
