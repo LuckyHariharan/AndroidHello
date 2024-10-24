@@ -1,0 +1,10 @@
+# Exclude config.properties file
+config.properties
+
+# Exclude compiler.xml file
+.idea/compiler.xml
+
+# Exclude project_default.xml file
+.idea/project_default.xml
+
+# Add any other files or patterns you want to exclude
