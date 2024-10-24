@@ -1,10 +1,8 @@
-# Exclude config.properties file
-config.properties
+# Exclude Gradle config files
+.gradle/config.properties
 
-# Exclude compiler.xml file
+# Exclude IntelliJ IDEA configuration files
 .idea/compiler.xml
-
-# Exclude project_default.xml file
-.idea/project_default.xml
-
-# Add any other files or patterns you want to exclude
+.idea/gradle.xml
+.idea/inspections/Project_Default.xml
+.idea/misc.xml
