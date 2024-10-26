@@ -1,0 +1,8 @@
+# Exclude Gradle config files
+.gradle/config.properties
+
+# Exclude IntelliJ IDEA configuration files
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/inspections/Project_Default.xml
+.idea/misc.xml

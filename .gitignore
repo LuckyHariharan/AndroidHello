@@ -13,3 +13,11 @@
 .externalNativeBuild
 .cxx
 local.properties
+.idea/compiler.xml
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+app/src/main/java/com/example/myapplication/MainActivity.kt
+.idea/misc.xml
+*.properties
