@@ -22,8 +22,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
-                }
+                    PickupCardApp {
+                        // This is the lambda passed to onAddToCalendarClick
+                        addEventToGoogleCalendar(
+                            this,
+                            "Food Bank Pickup",
+                            "123 Main St, Cityville",
+                            getMillisForDate(2023, 10, 10, 11, 0), // Nov 10, 11AM
+                            getMillisForDate(2023, 10, 10, 12, 0)  // Nov 10, 12PM
+                        )
+                    }                }
             }
         }
     }
