@@ -58,7 +58,7 @@ dependencies {
     // Network
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 
-
+    implementation("androidx.navigation:navigation-compose:2.7.3")
     implementation ("androidx.compose.runtime:runtime-livedata:1.1.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
