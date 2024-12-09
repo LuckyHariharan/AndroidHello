@@ -13,3 +13,12 @@
 .externalNativeBuild
 .cxx
 local.properties
+*.xd
+.idea/copilot/chatSessions/xd.lck
+.idea/copilot/chatSessions/blobs/version
+.idea/deploymentTargetDropDown.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/deploymentTargetDropDown.xml
+.idea/gradle.xml
+.idea/misc.xml
