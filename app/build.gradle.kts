@@ -70,7 +70,7 @@ dependencies {
     val roomVersion = "2.6.1"
 
     implementation("androidx.room:room-runtime:$roomVersion")
-//    kapt("androidx.room:room-compiler:$roomVersion") // Use kapt for Kotlin
+    kapt("androidx.room:room-compiler:$roomVersion") // Use kapt for Kotlin
 
     // Optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$roomVersion")
