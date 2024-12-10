@@ -21,17 +21,18 @@ class InstrumentViewModel : ViewModel() {
     }
 
     // create getInstruments Method
-    fun getInstruments() {
+    fun getInstruments(){
         // run coroutine
-        viewModelScope.launch {
-            // run try catch block
-            try {
-                val instrumentResponse = RetrofitInterface.retrofit.getInstruments()
-                if (instrumentResponse.isSuccessful && instrumentResponse.body() != null) {
+        viewModelScope.launch{
+        // run try catch block
+            try{
+            val instrumentResponse = RetrofitInterface.retrofit.getInstruments()
+                if(instrumentResponse.isSuccessful && instrumentResponse.body() != null){
                     _instruments.value = instrumentResponse.body()!!
                     _filteredInstruments.value = instrumentResponse.body()!!
                 }
-            } catch (e: Exception) {
+            }
+            catch(e: Exception){
                 Log.e("viewmodel getinstruments", "${e.message}")
             }
         }
@@ -39,15 +40,15 @@ class InstrumentViewModel : ViewModel() {
     }
 
     // implement filter instruments
-    fun filterInstruments(query: String) {
+    fun filterInstruments(query: String){
         // filter each instrument list based on if the first few letters match the name
         val allInstruments = _instruments.value
-        if (query == "") {
+        if(query==""){
             _filteredInstruments.value = allInstruments
-        } else {
-            _filteredInstruments.value = allInstruments.filter { instrument ->
-                instrument.name.length >= query.length && instrument.name.substring(0, query.length)
-                    .equals(query, ignoreCase = true)
+        }
+        else{
+            _filteredInstruments.value = allInstruments.filter{
+                instrument ->   instrument.name.length >= query.length && instrument.name.substring(0,query.length).equals(query, ignoreCase = true)
             }
         }
     }
