@@ -19,9 +19,10 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
                 ) {
-                    TimerScreen(viewModel = TimerViewModel())
+                    Greeting("Android")
                 }
             }
         }
@@ -31,7 +32,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!", modifier = modifier
+        text = "Hello $name!",
+        modifier = modifier
     )
 }
 
