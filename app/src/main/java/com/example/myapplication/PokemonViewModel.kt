@@ -12,13 +12,18 @@ import kotlinx.coroutines.launch
 
 class PokemonViewModel : ViewModel() {
     // create state variables for our pokemon -- correctly collect mutable state for our screen
-    private val _pokemonList = MutableStateFlow<List<Result>>(emptyList())
+    private val _pokemonList =
+        MutableStateFlow<List<Result>>(emptyList())
     val pokemonList = _pokemonList.asStateFlow()
+
+    private val _pokemonAbilities = MutableStateFlow<List<String>>(emptyList())
+    val pokemonAbilities = _pokemonAbilities.asStateFlow()
 
     // define the method to recieve our pokemon data
     init {
         getPokemon()
     }
+
     private fun getPokemon() {
         // call our getPokemon method
         // call a courotine
@@ -27,12 +32,23 @@ class PokemonViewModel : ViewModel() {
         // if the response is valid (error check passes) then save the body
         // in our state variable
         viewModelScope.launch {
-            val response = RetrofitInstance.retrofit.getPokemonList()
+            val response =
+                RetrofitInstance.retrofit.getPokemonList()
             if (response.isSuccessful && response.body() != null) {
-                _pokemonList.value = response.body()!!.results
+                _pokemonList.value =
+                    response.body()!!.results
             }
         }
 
+    }
+
+    fun getPokemonAbilities(pokemonName: String){
+        viewModelScope.launch{
+            val response = RetrofitInstance.retrofit.getPokemonAbilities(pokemonName)
+            if(response.isSuccessful && response.body() != null){
+                _pokemonAbilities.value = response.body()!!.abilities.map {it.ability.name}
+            }
+        }
     }
 
 
