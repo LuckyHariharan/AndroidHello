@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.InstrumentFeature
 
 data class InstrumentItem(
     val current_price: Double,

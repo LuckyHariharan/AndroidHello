@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.InstrumentFeature
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
